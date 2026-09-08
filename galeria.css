@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+/* ========================================
+   CORES DO SITE
+======================================== */
+
+:root {
+    --verde: #10bb9e;
+    --verde-escuro: #087f73;
+
+    --azul-escuro: #173f4a;
+
+    --fundo: #f4faf9;
+
+    --cinza-claro: #e8f0ef;
+
+    --branco: #ffffff;
+
+    --texto: #212529;
+
+    --texto-secundario: #607277;
+}
+
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    background-color: var(--azul-escuro) !important;
+    border-bottom: 3px solid var(--verde);
+}
+
+
+.navbar .nav-link {
+    color: var(--branco);
+    transition: 0.3s;
+}
+
+
+.navbar .nav-link:hover {
+    color: var(--verde);
+}
+
+
+.navbar .nav-link.active {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+
+.navbar-toggler {
+    border-color: var(--verde);
+}
+
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* ========================================
+   TÍTULO DA PÁGINA
+======================================== */
+
+main > h1 {
+    font-family: 'Archivo Black', sans-serif;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    margin-bottom: 20px;
+
+    padding: 0 20px;
+
+    font-size: 50px;
+
+    color: var(--azul-escuro);
+}
+
+
+/* ========================================
+   LINHA ABAIXO DO TÍTULO
+======================================== */
+
+main > hr {
+    width: 100%;
+
+    max-width: 850px;
+
+    height: 5px;
+
+    border: none;
+
+    background-color: var(--verde);
+
+    margin: 0 auto 30px;
+
+    border-radius: 15px;
+
+    opacity: 1;
+}
+
+
+/* ========================================
+   ÁREA DA GALERIA
+======================================== */
+
+.album {
+    background-color: var(--fundo) !important;
+}
+
+
+.album .container {
+    padding-top: 10px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.card {
+    height: 100%;
+
+    background-color: var(--branco);
+
+    border: 2px solid var(--verde);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: none !important;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ========================================
+   EFEITO DOS CARDS
+======================================== */
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 15px rgba(23, 63, 74, 0.15) !important;
+}
+
+
+/* ========================================
+   IMAGEM DOS CARDS
+======================================== */
+
+.card-img-top {
+    width: 100%;
+
+    height: 225px;
+
+    object-fit: cover;
+
+    background-color: var(--cinza-claro);
+}
+
+
+/* ========================================
+   CORPO DOS CARDS
+======================================== */
+
+.card-body {
+    padding: 25px;
+
+    background-color: var(--branco);
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+
+/* ========================================
+   TÍTULO DOS CARDS
+======================================== */
+
+.card-title {
+    font-family: 'Archivo Black', sans-serif;
+
+    color: var(--azul-escuro);
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ========================================
+   SUBTÍTULOS
+======================================== */
+
+.card-body strong {
+    color: var(--verde-escuro);
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   TEXTO DOS CARDS
+======================================== */
+
+.card-text {
+    color: var(--texto);
+
+    line-height: 1.6;
+
+    margin-bottom: 14px;
+}
+
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   DESTAQUE DA EVIDÊNCIA CIENTÍFICA
+======================================== */
+
+.evidencia {
+    margin-top: 5px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--cinza-claro);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    text-align: center;
+
+    color: var(--texto-secundario);
+}
+
+
+/* ========================================
+   LINHA VERDE ACIMA DO FOOTER
+======================================== */
+
+footer .container::before {
+    content: '';
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    height: 5px;
+
+    background-color: var(--verde);
+
+    margin: 0 auto 20px;
+
+    border-radius: 15px;
+}
+
+
+/* ========================================
+   LINKS DO FOOTER
+======================================== */
+
+footer a {
+    color: var(--verde-escuro);
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+footer a:hover {
+    color: var(--verde);
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+
+    main > h1 {
+        font-size: 40px;
+    }
+
+
+    .card-img-top {
+        height: 220px;
+    }
+
+}
+
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 576px) {
+
+    main > h1 {
+        font-size: 32px;
+
+        margin-top: 30px;
+
+        margin-bottom: 15px;
+    }
+
+
+    main > hr {
+        height: 4px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .card-body {
+        padding: 20px;
+    }
+
+
+    .card-img-top {
+        height: 200px;
+    }
+
+
+    .card-title {
+        font-size: 20px;
+    }
+
+}

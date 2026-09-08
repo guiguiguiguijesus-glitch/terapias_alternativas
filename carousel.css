@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+:root {
+    --verde: #10bb9e;
+    --verde-escuro: #087f73;
+    --azul-escuro: #173f4a;
+    --fundo: #f4faf9;
+    --cinza-claro: #e8f0ef;
+    --branco: #ffffff;
+    --texto: #212529;
+    --texto-secundario: #607277;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background-color: var(--azul-escuro) !important;
+    border-bottom: 3px solid var(--verde);
+}
+
+.navbar .nav-link {
+    color: var(--branco);
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--verde);
+}
+
+.navbar .nav-link.active {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: var(--verde);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* TÍTULO */
+
+.titulo {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: var(--azul-escuro);
+}
+
+.titulo::after {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: 5px;
+    background-color: var(--verde);
+    margin: 10px auto 0;
+    border-radius: 15px;
+}
+
+
+/* SUBTÍTULOS */
+
+.subtitulo {
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: var(--azul-escuro);
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* PESSOAS */
+
+.credito {
+    margin-bottom: 35px;
+}
+
+.foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--branco);
+    border: 5px solid var(--verde);
+    margin: 0 auto;
+}
+
+.credito h2 {
+    color: var(--azul-escuro);
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.credito p {
+    color: var(--texto);
+    margin: 0 auto;
+    max-width: 280px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    color: var(--texto-secundario);
+}
+
+footer p::before {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: 5px;
+    background-color: var(--verde);
+    margin: 0 auto 10px;
+    border-radius: 15px;
+}
+
+footer p {
+    padding-top: 20px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .titulo {
+        font-size: 40px;
+    }
+
+    .subtitulo {
+        font-size: 26px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .titulo {
+        font-size: 32px;
+    }
+
+    .subtitulo {
+        font-size: 23px;
+    }
+
+    .foto {
+        width: 120px;
+        height: 120px;
+    }
+
+}
