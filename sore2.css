@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+/* ========================================
+   CORES DO SITE
+======================================== */
+
+:root {
+    --verde: #10bb9e;
+    --verde-escuro: #087f73;
+
+    --azul-escuro: #173f4a;
+
+    --fundo: #f4faf9;
+
+    --cinza-claro: #e8f0ef;
+
+    --branco: #ffffff;
+
+    --texto: #212529;
+
+    --texto-secundario: #607277;
+}	
+
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    background-color: var(--azul-escuro) !important;
+    border-bottom: 3px solid var(--verde);
+}
+
+
+/* Links da navbar */
+
+.navbar .nav-link {
+    color: var(--branco);
+    transition: 0.3s;
+}
+
+
+/* Quando passar o mouse */
+
+.navbar .nav-link:hover {
+    color: var(--verde);
+}
+
+
+/* Página atual */
+
+.navbar .nav-link.active {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+
+/* Botão do menu no celular */
+
+.navbar-toggler {
+    border-color: var(--verde);
+}
+
+
+/* Ícone do menu */
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* ========================================
+   TÍTULO "SOBRE"
+======================================== */
+
+.titulo {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-size: 50px;
+
+    color: var(--azul-escuro);
+}
+
+
+/* Linha abaixo do título */
+
+.titulo::after {
+    content: '';
+
+    display: block;
+
+    width: 100%;
+    max-width: 850px;
+
+    height: 5px;
+
+    background-color: var(--verde);
+
+    margin: 10px auto 0;
+
+    border-radius: 15px;
+}
+
+
+/* ========================================
+   JUMBOTRON
+======================================== */
+
+.jumbotron {
+    background-color: var(--branco);
+}
+
+
+/* Título do Jumbotron */
+
+.jumbotron h1 {
+    color: var(--azul-escuro);
+}
+
+
+/* Texto do Jumbotron */
+
+.jumbotron p {
+    color: var(--texto);
+}
+
+
+/* ========================================
+   BORDAS
+======================================== */
+
+.borda {
+    border: 2px solid var(--verde) !important;
+
+    border-radius: 8px;
+}
+
+
+/* ========================================
+   CARD ESCURO
+======================================== */
+
+.card-escuro {
+    background-color: var(--azul-escuro);
+
+    color: var(--branco);
+}
+
+
+/* Título do card escuro */
+
+.card-escuro h2 {
+    color: var(--branco);
+}
+
+
+/* Texto do card escuro */
+
+.card-escuro p {
+    color: #e8f0ef;
+}
+
+
+/* ========================================
+   CARD CLARO
+======================================== */
+
+.card-claro {
+    background-color: var(--branco);
+
+    color: var(--texto);
+}
+
+
+/* Título do card claro */
+
+.card-claro h2 {
+    color: var(--azul-escuro);
+}
+
+
+/* Texto do card claro */
+
+.card-claro p {
+    color: var(--texto);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    text-align: center;
+
+    color: var(--texto-secundario);
+}
+
+
+/* Linha verde acima do footer */
+
+footer p::before {
+    content: '';
+
+    display: block;
+
+    width: 100%;
+    max-width: 850px;
+
+    height: 5px;
+
+    background-color: var(--verde);
+
+    margin: 0 auto 10px;
+
+    border-radius: 15px;
+}
+
+
+/* Espaço do texto do footer */
+
+footer p {
+    padding-top: 20px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .titulo {
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .titulo {
+        font-size: 32px;
+    }
+
+}

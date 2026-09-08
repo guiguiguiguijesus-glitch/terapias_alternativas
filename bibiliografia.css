@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+
+/* ========================================
+   CORES DO SITE
+======================================== */
+
+:root {
+    --verde: #10bb9e;
+    --verde-escuro: #087f73;
+
+    --azul-escuro: #173f4a;
+
+    --fundo: #f4faf9;
+
+    --cinza-claro: #e8f0ef;
+
+    --branco: #ffffff;
+
+    --texto: #212529;
+
+    --texto-secundario: #607277;
+}
+
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+body {
+    background-color: var(--fundo);
+
+    color: var(--texto);
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    background-color: var(--azul-escuro) !important;
+
+    border-bottom: 3px solid var(--verde);
+}
+
+
+.navbar .nav-link {
+    color: var(--branco);
+
+    transition: 0.3s;
+}
+
+
+.navbar .nav-link:hover {
+    color: var(--verde);
+}
+
+
+.navbar .nav-link.active {
+    color: var(--verde);
+
+    font-weight: bold;
+}
+
+
+.navbar-toggler {
+    border-color: var(--verde);
+}
+
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* ========================================
+   TÍTULO PRINCIPAL
+======================================== */
+
+main h1 {
+    font-family: 'Archivo Black', sans-serif;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    color: var(--azul-escuro);
+
+    font-size: 50px;
+
+    margin-top: 40px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   LINHAS VERDES
+======================================== */
+
+.verde {
+    border: none;
+
+    height: 5px;
+
+    background-color: var(--verde);
+
+    border-radius: 15px;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 30px auto;
+
+    opacity: 1;
+}
+
+
+/* ========================================
+   FEATURETTES
+======================================== */
+
+.featurette {
+    background-color: var(--branco);
+
+    border: 2px solid var(--verde);
+
+    border-radius: 8px;
+
+    padding: 40px;
+
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   TÍTULOS DOS FEATURETTES
+======================================== */
+
+.featurette h2 {
+    font-family: 'Archivo Black', sans-serif;
+
+    color: var(--azul-escuro);
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   TEXTO DOS FEATURETTES
+======================================== */
+
+.featurette p {
+    color: var(--texto);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   TEXTO SECUNDÁRIO DOS TÍTULOS
+======================================== */
+
+.featurette .text-body-secondary {
+    color: var(--verde-escuro) !important;
+}
+
+
+/* ========================================
+   IMAGENS
+======================================== */
+
+.featurette-image {
+    width: 100%;
+
+    max-width: 450px;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    border: 2px solid var(--cinza-claro);
+
+    background-color: var(--cinza-claro);
+}
+
+
+/* ========================================
+   PLACEHOLDER DO BOOTSTRAP
+======================================== */
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+
+    text-anchor: middle;
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    user-select: none;
+
+    background-color: var(--cinza-claro) !important;
+}
+
+
+.bd-placeholder-img rect {
+    fill: var(--cinza-claro) !important;
+}
+
+
+.bd-placeholder-img text {
+    fill: var(--texto-secundario) !important;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    margin-top: 40px;
+
+    padding-bottom: 30px;
+}
+
+
+/* ========================================
+   LINHA DO FOOTER
+======================================== */
+
+footer .container::before {
+    content: '';
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    height: 5px;
+
+    background-color: var(--verde);
+
+    margin: 0 auto 20px;
+
+    border-radius: 15px;
+}
+
+
+/* ========================================
+   LINKS DO FOOTER
+======================================== */
+
+footer a {
+    color: var(--verde-escuro);
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+footer a:hover {
+    color: var(--verde);
+}
+
+
+/* ========================================
+   BOTÃO VOLTAR AO TOPO
+======================================== */
+
+footer .float-end a {
+    color: var(--verde-escuro);
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+
+    main h1 {
+        font-size: 40px;
+
+        padding: 0 20px;
+    }
+
+
+    .featurette {
+        padding: 30px;
+
+        margin-left: 10px;
+
+        margin-right: 10px;
+    }
+
+
+    .featurette h2 {
+        font-size: 26px;
+    }
+
+
+    .featurette p {
+        font-size: 17px;
+    }
+
+
+    .featurette-image {
+        margin-top: 25px;
+
+        height: 300px;
+    }
+
+}
+
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 576px) {
+
+    main h1 {
+        font-size: 32px;
+
+        margin-top: 30px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .verde {
+        height: 4px;
+
+        margin: 20px auto;
+    }
+
+
+    .featurette {
+        padding: 20px;
+
+        border-radius: 8px;
+    }
+
+
+    .featurette h2 {
+        font-size: 22px;
+    }
+
+
+    .featurette p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    .featurette-image {
+        height: 250px;
+    }
+
+
+    footer {
+        font-size: 14px;
+    }
+
+}
+```
