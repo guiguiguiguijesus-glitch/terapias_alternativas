@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-
 /* ========================================
    CORES DO SITE
 ======================================== */
@@ -8,20 +7,13 @@
 :root {
     --verde: #10bb9e;
     --verde-escuro: #087f73;
-
     --azul-escuro: #173f4a;
-
     --fundo: #f4faf9;
-
     --cinza-claro: #e8f0ef;
-
     --branco: #ffffff;
-
     --texto: #212529;
-
     --texto-secundario: #607277;
 }
-
 
 /* ========================================
    CONFIGURAÇÕES GERAIS
@@ -32,6 +24,18 @@ body {
     color: var(--texto);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+	::view-transition-old(root) {
+	  animation-duration: 0.5s;
+	}
+
+	/* Animação da página que está entrando */
+	::view-transition-new(root) {
+	  animation-duration: 0.5s;
+	}
 
 /* ========================================
    NAVBAR
@@ -42,43 +46,74 @@ body {
     border-bottom: 3px solid var(--verde);
 }
 
-
-/* Links da navbar */
-
 .navbar .nav-link {
     color: var(--branco);
     transition: 0.3s;
 }
 
-
-/* Quando passar o mouse */
-
 .navbar .nav-link:hover {
     color: var(--verde);
 }
-
-
-/* Página atual */
 
 .navbar .nav-link.active {
     color: var(--verde);
     font-weight: bold;
 }
 
-
-/* Botão do menu no celular */
-
 .navbar-toggler {
     border-color: var(--verde);
 }
-
-
-/* Ícone do menu */
 
 .navbar-toggler-icon {
     filter: invert(1);
 }
 
+/* SUBMENU NO HOVER */
+.navbar .nav-item.dropdown .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    background-color: var(--azul-escuro);
+    border: 2px solid var(--verde);
+}
+
+.navbar .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: var(--branco);
+    transition: 0.3s;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: var(--verde-escuro);
+    color: var(--verde);
+}
+
+/* ========================================
+   BANDEIRAS
+======================================== */
+
+.bandeiras {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-left: 30px;
+}
+
+.bandeiras a {
+    display: block;
+}
+
+.bandeiras img {
+    width: 45px;
+    height: 30px;
+    object-fit: cover;
+    display: block;
+}
 
 /* ========================================
    TÍTULOS DA PÁGINA
@@ -88,34 +123,30 @@ body {
     font-family: 'Archivo Black', sans-serif;
     font-weight: bold;
     text-align: center;
-
     margin-bottom: 20px;
-
     font-size: 50px;
-
     color: var(--azul-escuro);
 }
 
-
-/* Linha verde abaixo do título */
-
 .titulo::after {
     content: '';
-
     display: block;
-
     width: 100%;
     max-width: 850px;
-
     height: 5px;
-
     background-color: var(--verde);
-
     margin: 10px auto 0;
-
     border-radius: 15px;
 }
 
+.subtitulo {
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: var(--azul-escuro);
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
 
 /* ========================================
    CARROSSEL
@@ -126,30 +157,6 @@ body {
     overflow: hidden;
 }
 
-
-/* ========================================
-   JUMBOTRON
-======================================== */
-
-.jumbotron {
-    background-color: var(--branco);
-}
-
-
-/* Título do Jumbotron */
-
-.jumbotron h1 {
-    color: var(--azul-escuro);
-}
-
-
-/* Texto do Jumbotron */
-
-.jumbotron p {
-    color: var(--texto);
-}
-
-
 /* ========================================
    BORDAS REUTILIZÁVEIS
 ======================================== */
@@ -159,42 +166,36 @@ body {
     border-radius: 8px;
 }
 
-
 /* ========================================
-   CARDS
+   CARDS E PESSOAS (CRÉDITOS)
 ======================================== */
 
-/* Card Escuro */
-
-.card-escuro {
-    background-color: var(--azul-escuro);
-    color: var(--branco);
+.credito {
+    margin-bottom: 35px;
 }
 
-.card-escuro h2 {
-    color: var(--branco);
-}
-
-.card-escuro p {
-    color: #e8f0ef;
-}
-
-
-/* Card Claro */
-
-.card-claro {
+.foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
     background-color: var(--branco);
-    color: var(--texto);
+    border: 5px solid var(--verde);
+    margin: 0 auto;
 }
 
-.card-claro h2 {
+.credito h2 {
     color: var(--azul-escuro);
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 10px;
 }
 
-.card-claro p {
+.credito p {
     color: var(--texto);
+    margin: 0 auto;
+    max-width: 280px;
 }
-
 
 /* ========================================
    FOOTER
@@ -205,51 +206,46 @@ footer {
     color: var(--texto-secundario);
 }
 
-
-/* Linha verde acima do footer */
-
 footer p::before {
     content: '';
-
     display: block;
-
     width: 100%;
     max-width: 850px;
-
     height: 5px;
-
     background-color: var(--verde);
-
     margin: 0 auto 10px;
-
     border-radius: 15px;
 }
-
-
-/* Espaço do texto do footer */
 
 footer p {
     padding-top: 20px;
 }
-
 
 /* ========================================
    RESPONSIVIDADE
 ======================================== */
 
 @media (max-width: 768px) {
-
     .titulo {
         font-size: 40px;
     }
 
+    .subtitulo {
+        font-size: 26px;
+    }
 }
 
-
 @media (max-width: 576px) {
-
     .titulo {
         font-size: 32px;
     }
 
+    .subtitulo {
+        font-size: 23px;
+    }
+
+    .foto {
+        width: 120px;
+        height: 120px;
+    }
 }
